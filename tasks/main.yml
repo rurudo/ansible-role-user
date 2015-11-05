@@ -1,0 +1,10 @@
+---
+- name: Create project name group
+  group: >
+    name={{ user_project_name }}
+
+- name: Add user
+  user: >
+    name={{ user_name }}
+    group={{ user_project_name }}
+    generate_ssh_key=yes
